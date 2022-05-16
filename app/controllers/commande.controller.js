@@ -4,7 +4,7 @@ const commandeModel = require('../models/commande.model.js')
 exports.create = async (req, res) => {
     
     
-   const commande = new clientModel({
+   const commande = new commandeModel({
         id_produit:req.body.id_produit,
         id_client:req.body.id_client,
         id_restaurant:req.body.id_restaurant,
