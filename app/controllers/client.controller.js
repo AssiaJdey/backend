@@ -15,7 +15,7 @@ exports.create = async (req, res) => {
         photos_de_profil:req.body.photos_de_profil,
         photos_de_couverture:req.body.photos_de_couverture,
         fonction:req.body.fonction,
-        bio:Sreq.body.bio,
+        bio:req.body.bio,
         reseau:req.body.reseau,
         banque:req.body.banque,
         rib:req.body.rib,
