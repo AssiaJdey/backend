@@ -9,11 +9,11 @@ var mongoose = require('mongoose');
         photos:Array(),
         temps_de_preparatin:String,
         en_promo:Boolean,
-        discount:Int32Array,
-        nbr_view:Int32Array,
-        nbr_like:Int32Array,
-        nbr_share:Int32Array,
-        nbr_sales:Int32Array,
+        discount:Number,
+        nbr_view:Number,
+        nbr_like:Number,
+        nbr_share:Number,
+        nbr_sales:Number,
         id_menu:String
       },
       { timestamps: true }
