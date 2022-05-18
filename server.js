@@ -4,6 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const clientRoute = require('./app/routes/client.route.js')
+const commandeRoute = require('./app/routes/commande.route.js')
+
 
 var corsOptions = {
   origin: "http://localhost:8081"
@@ -28,6 +30,8 @@ db.mongoose
   });
 
 app.use('/client',clientRoute)
+app.use('/commande',commandeRoute)
+
 
 // simple route
 app.get("/", (req, res) => {
