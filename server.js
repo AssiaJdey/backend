@@ -5,18 +5,12 @@ const cors = require("cors");
 const app = express();
 const clientRoute = require('./app/routes/client.route.js')
 const commandeRoute = require('./app/routes/commande.route.js')
-const evaluation_commandeRoute = require('./app/routes/evaluation_commande.route.js')
-const livreurRoute = require('./app/routes/livreur.route.js')
-const menuRoute = require('./app/routes/menu.route.js')
-const produitRoute = require('./app/routes/produit.route.js')
-const restaurantRoute = require('./app/routes/restaurant.route.js')
-
 
 
 var corsOptions = {
-  origin: "*"
+  origin: "https://frontendpfe.herokuapp.com"
 };
-app.use(cors());
+app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -37,11 +31,6 @@ db.mongoose
 
 app.use('/client',clientRoute)
 app.use('/commande',commandeRoute)
-app.use('/evaluation_commande',evaluation_commandeRoute)
-app.use('/livreur',livreurRoute)
-app.use('/menu',menuRoute)
-app.use('/produit',produitRoute)
-app.use('/restaurant',restaurantRoute)
 
 
 // simple route
