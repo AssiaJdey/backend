@@ -8,9 +8,9 @@ const commandeRoute = require('./app/routes/commande.route.js')
 
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "*"
 };
-app.use(cors(corsOptions));
+app.use(cors());
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
