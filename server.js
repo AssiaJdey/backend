@@ -7,8 +7,10 @@ const clientRoute = require('./app/routes/client.route.js')
 const commandeRoute = require('./app/routes/commande.route.js')
 
 
-
-app.use(cors());
+var corsOptions = {
+  origin: "*"
+};
+app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
