@@ -5,8 +5,8 @@ exports.create = async (req, res) => {
     
     
    const livreur = new livreurModel({
-        nom_client:  req.body.nom_client,
-        prenom_client:req.body.prenom_client,
+        nom_livreur:  req.body.nom_livreur,
+        prenom_livreur:req.body.prenom_livreur,
         adresse: req.body.adresse,
         date_de_naissance:req.body.date_de_naissance,
         sexe:req.body.sexe,
@@ -15,7 +15,7 @@ exports.create = async (req, res) => {
         photos_de_profil:req.body.photos_de_profil,
         photos_de_couverture:req.body.photos_de_couverture,
         fonction:req.body.fonction,
-        bio:Sreq.body.bio,
+        bio:req.body.bio,
         reseau:req.body.reseau,
         banque:req.body.banque,
         rib:req.body.rib,

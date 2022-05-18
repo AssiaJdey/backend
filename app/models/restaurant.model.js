@@ -1,4 +1,4 @@
-module.exports = mongoose => {
+var mongoose = require('mongoose');
     var schema = mongoose.Schema(
       {
         nom_resto: String,
@@ -16,12 +16,4 @@ module.exports = mongoose => {
       { timestamps: true }
     );
 
-    schema.method("toJSON", function() {
-      const { __v, _id} = this.toObject();
-      object.id = _id;
-      return object;
-    });
-
-    const Restaurant = mongoose.model("restaurant", schema);
-    return Restaurant;
-  };
+    module.exports = mongoose.model("restaurant", schema);

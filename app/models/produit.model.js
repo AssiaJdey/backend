@@ -1,4 +1,4 @@
-module.exports = mongoose => {
+var mongoose = require('mongoose');
     var schema = mongoose.Schema(
       {
         nom: String,
@@ -9,22 +9,14 @@ module.exports = mongoose => {
         photos:Array(),
         temps_de_preparatin:String,
         en_promo:Boolean,
-        discount:Int32Array,
-        nbr_view:Int32Array,
-        nbr_like:Int32Array,
-        nbr_share:Int32Array,
-        nbr_sales:Int32Array,
+        discount:Number,
+        nbr_view:Number,
+        nbr_like:Number,
+        nbr_share:Number,
+        nbr_sales:Number,
         id_menu:String
       },
       { timestamps: true }
     );
 
-    schema.method("toJSON", function() {
-      const { __v, _id} = this.toObject();
-      object.id = _id;
-      return object;
-    });
-
-    const Produit = mongoose.model("produit", schema);
-    return Produit;
-  };
+    module.exports = mongoose.model("produit", schema);
