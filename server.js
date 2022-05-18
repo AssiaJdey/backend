@@ -7,10 +7,8 @@ const clientRoute = require('./app/routes/client.route.js')
 const commandeRoute = require('./app/routes/commande.route.js')
 
 
-var corsOptions = {
-  origin: "https://frontendpfe.herokuapp.com"
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
