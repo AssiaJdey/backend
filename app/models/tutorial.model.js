@@ -1,4 +1,4 @@
-module.exports = mongoose => {
+var mongoose = require('mongoose');
     var schema = mongoose.Schema(
       {
         title: String,
@@ -7,11 +7,4 @@ module.exports = mongoose => {
       },
       { timestamps: true }
     );
-    schema.method("toJSON", function() {
-      const { __v, _id, ...object } = this.toObject();
-      object.id = _id;
-      return object;
-    });
-    const Tutorial = mongoose.model("tutorial", schema);
-    return Tutorial;
-  };
+    module.exports = mongoose.model("tutorial", schema);
