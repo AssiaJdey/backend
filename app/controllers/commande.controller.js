@@ -11,7 +11,7 @@ exports.create = async (req, res) => {
         id_livreur:req.body.id_livreur,
         prix_totale:req.body.prix_totale,
         duree_estimee:req.body.duree_estimee,
-        duree_reel:Sreq.body.duree_reel,
+        duree_reel:req.body.duree_reel,
         date_de_lancemnt_de_la_commande:req.body.date_de_lancemnt_de_la_commande,
         attente_resto:req.body.attente_resto,
         attente_livreur:req.body.attente_livreur,
