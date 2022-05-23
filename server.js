@@ -4,7 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const clientRoute = require('./app/routes/client.route.js')
+
 const commandeRoute = require('./app/routes/commande.route.js')
+const restaurantRoute = require('./app/routes/restaurant.route.js')
 
 
 var corsOptions = {
@@ -31,6 +33,7 @@ db.mongoose
 
 app.use('/client',clientRoute)
 app.use('/commande',commandeRoute)
+app.use('/restaurant',restaurantRoute)
 
 
 // simple route
